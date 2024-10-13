@@ -13,7 +13,7 @@ public class JwkSetController {
 
     private final JWKSet jwkSet;
 
-    @GetMapping("/.well-known/jwks")
+    @GetMapping("/.well-known/jwks.json")
     public Map<String, Object> keys() {
         return this.jwkSet.toJSONObject();
     }

@@ -47,7 +47,7 @@ public class ApplicationSecurity {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((authorize) -> authorize
                         .requestMatchers(HttpMethod.POST, "/login", "/api/v1/users").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/.well-known/jwks").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/.well-known/jwks.json").permitAll()
                         .anyRequest().hasAuthority(String.valueOf(User.Role.USER)))
                 .sessionManagement((session) -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(jwtRequestFilter, CustomAuthenticationFilter.class)

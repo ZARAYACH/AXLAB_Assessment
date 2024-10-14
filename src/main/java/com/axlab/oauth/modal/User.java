@@ -1,4 +1,4 @@
-package com.axlab.oauth;
+package com.axlab.oauth.modal;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -44,7 +44,7 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.singletonList(new SimpleGrantedAuthority(this.role.toString()));
+        return Collections.singletonList(new SimpleGrantedAuthority("ROLE_"+ this.role.toString()));
     }
 
     @Override

@@ -1,7 +1,7 @@
 package com.axlab.oauth.security;
 
 
-import com.axlab.oauth.UserRepository;
+import com.axlab.oauth.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

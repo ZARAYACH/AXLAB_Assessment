@@ -1,5 +1,6 @@
-package com.axlab.oauth;
+package com.axlab.oauth.controller;
 
+import com.axlab.oauth.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +12,7 @@ public class UserController {
 
     private final UserService userService;
 
-    record EmailPasswordDto(String email,
+    public record EmailPasswordDto(String email,
                             String password) {
     }
 

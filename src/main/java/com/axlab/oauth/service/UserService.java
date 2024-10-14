@@ -1,10 +1,10 @@
-package com.axlab.oauth;
+package com.axlab.oauth.service;
 
-import com.axlab.oauth.UserController.EmailPasswordDto;
+import com.axlab.oauth.controller.UserController;
+import com.axlab.oauth.repository.UserRepository;
+import com.axlab.oauth.modal.User;
 import lombok.RequiredArgsConstructor;
-import org.hibernate.annotations.SQLInsert;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,7 +13,7 @@ public class UserService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-    public User create(EmailPasswordDto emailPasswordDto){
+    public User create(UserController.EmailPasswordDto emailPasswordDto){
         return userRepository.save(new User(emailPasswordDto.email(), passwordEncoder.encode(emailPasswordDto.password())));
     }
 }

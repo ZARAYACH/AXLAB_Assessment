@@ -1,4 +1,4 @@
-package com.axlab.oauth;
+package com.axlab.oauth.controller;
 
 import com.nimbusds.jose.jwk.JWKSet;
 import lombok.RequiredArgsConstructor;

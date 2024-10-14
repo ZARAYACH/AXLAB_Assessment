@@ -1,5 +1,6 @@
-package com.axlab.oauth;
+package com.axlab.oauth.repository;
 
+import com.axlab.oauth.modal.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

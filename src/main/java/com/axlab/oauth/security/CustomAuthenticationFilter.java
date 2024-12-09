@@ -1,6 +1,6 @@
 package com.axlab.oauth.security;
 
-import com.axlab.oauth.modal.User;
+import com.axlab.oauth.modal.user.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
